@@ -1,10 +1,11 @@
 name: Java CI with Maven, Docker, and EKS Deployment
-
 on:
-
+  push:
+    branches:
+      - main
   pull_request:
-    branches: ["main"]
-
+    branches:
+      - main
 env:
   ECR_REPOSITORY: rk-poc-ecr
   EKS_CLUSTER_NAME: rk-poc
